@@ -2205,12 +2205,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.15, y: 0.02, z: 0.1}
-  m_Center: {x: 0, y: 0.1, z: -0.2}
+  m_Size: {x: 0.3375741, y: 0.294036, z: 0.4104921}
+  m_Center: {x: 0.0000009536743, y: -6.649538e-17, z: 0.009396621}
 --- !u!1001 &1186905516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5176,7 +5176,7 @@ ConfigurableJoint:
   m_Anchor: {x: 0, y: 0.0947018, z: -0.2}
   m_Axis: {x: 0, y: 0, z: -90}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -6.2539997, y: 4.234701, z: -8.25}
+  m_ConnectedAnchor: {x: -6.3079996, y: 4.253701, z: -8.25}
   serializedVersion: 3
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -5280,7 +5280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
   m_Colliders:
-  - {fileID: 0}
+  - {fileID: 8606311150561899613}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -5465,8 +5465,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3375741, y: 0.294036, z: 0.4104921}
-  m_Center: {x: 0.0000009536743, y: -6.649538e-17, z: 0.009396621}
+  m_Size: {x: 0.13, y: 0.02, z: 0.03}
+  m_Center: {x: 0.0000009536743, y: 0.11, z: -0.21}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
