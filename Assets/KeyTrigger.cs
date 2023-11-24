@@ -26,7 +26,7 @@ public class KeyTrigger : MonoBehaviour
         {
             // Key entered the trigger zone
             isKeyInserted = true;
-            drawerToInteract.GetComponent<XRGrabInteractable>().enabled = false;
+            drawerToInteract.GetComponent<XRGrabInteractable>().enabled = true;
             Debug.Log("Key inserted!");
             Destroy(this.gameObject);
         }
