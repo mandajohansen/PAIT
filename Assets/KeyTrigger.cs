@@ -28,6 +28,7 @@ public class KeyTrigger : MonoBehaviour
             isKeyInserted = true;
             drawerToInteract.GetComponent<XRGrabInteractable>().enabled = false;
             Debug.Log("Key inserted!");
+            Destroy(this.gameObject);
         }
     }
 }
