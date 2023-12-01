@@ -15,6 +15,15 @@ namespace NavKeypad
         [SerializeField] private Keypad keypad;
 
 
+       
+
+        public void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("FingerTipCollider"))
+            {
+                PressButton();
+            }
+        }
         public void PressButton()
         {
             if (!moving)
