@@ -77,7 +77,7 @@ public class LighterLight : MonoBehaviour
         {
             // Teleport the object to a new position along the Z-axis
             Vector3 newPosition = candleLightLight.transform.position;
-            newPosition.y -= 2.6f;
+            newPosition.y -= 2.8f;
             candleLightLight.transform.position = newPosition;
 
             // Set the flag to indicate that teleportation has occurred
