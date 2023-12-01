@@ -21,6 +21,7 @@ namespace NavKeypad
         {
             if (other.CompareTag("FingerTipCollider"))
             {
+                Debug.Log("KeycodeTrigger");
                 PressButton();
             }
         }
