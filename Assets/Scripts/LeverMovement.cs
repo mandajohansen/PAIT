@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class LeverMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
+    GameObject Lev_1;
+    GameObject Lev_2;
+
     void Start()
     {
-        
+        Lev_1 = GameObject.FindWithTag("Lever_1");
+        Lev_2 = GameObject.FindWithTag("Lever_2");
     }
 
-    // Update is called once per frame
-    void Update()
+
+    // Your original Switch method
+    public void Switch()
     {
-        
+        if (Lev_1 != null & Lev_2 != null){
+            Lev_1.SetActive(false);
+            Debug.Log("Found OG");
+            
+            Lev_2.SetActive(true);
+            Debug.Log("Found Copy");
+        }
+        else{
+            Debug.LogError("haha nothing");
+        }
+      
+    }
+
+    // Call the Switch method when the UnityEvent is invoked
+    public void OnSwitchEvent()
+    {
+        Switch();
     }
 }
+

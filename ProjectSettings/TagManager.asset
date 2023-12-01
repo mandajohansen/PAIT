@@ -21,39 +21,42 @@ TagManager:
   - CandleLight
   - CandleCollider
   - CandleLightLight
+  - FingerTipCollider
+  - Lever_1
+  - Lever_2
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  -
+  - 
   - Water
   - UI
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
-  -
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
