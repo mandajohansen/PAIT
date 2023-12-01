@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Key
   - Drawer
+  - reinforced_wooden_chest_top
   layers:
   - Default
   - TransparentFX
