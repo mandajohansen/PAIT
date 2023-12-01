@@ -18,6 +18,7 @@ TagManager:
   - Plate1
   - Plate2
   - Plate3
+  - FingerTipCollider
   layers:
   - Default
   - TransparentFX
