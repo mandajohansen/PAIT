@@ -6,6 +6,18 @@ TagManager:
   tags:
   - Key
   - Drawer
+  - Key2
+  - main-chest
+  - reinforced_wooden_chest_top
+  - Pepsi
+  - CandyCane
+  - Bear
+  - Checker1
+  - Checker2
+  - Checker3
+  - Plate1
+  - Plate2
+  - Plate3
   layers:
   - Default
   - TransparentFX
