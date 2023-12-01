@@ -18,6 +18,9 @@ TagManager:
   - Plate1
   - Plate2
   - Plate3
+  - CandleLight
+  - CandleCollider
+  - CandleLightLight
   layers:
   - Default
   - TransparentFX

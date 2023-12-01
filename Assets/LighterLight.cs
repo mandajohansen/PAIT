@@ -3,41 +3,54 @@ using UnityEngine;
 public class LighterLight : MonoBehaviour
 {
     public GameObject lightSource;
-    public float movementThreshold = 5f; // Adjust this threshold as needed
+    public GameObject candleLight;
+    public GameObject candleLightLight; // Reference to the CandleLightLight object
+    public float movementThreshold = 5f;
+    public float detectionRange = 2f;
     private bool isLightSourceActive = false;
     private Vector3 lastPosition;
     private float timeSinceLastMovement = 0f;
-    private float inactivityThreshold = 10f; // Adjust this threshold as needed
+    private float inactivityThreshold = 10f;
 
     void Start()
     {
-        // Store the initial position for velocity calculation
         lastPosition = transform.position;
     }
 
     void Update()
     {
-        // Calculate the current velocity
         Vector3 currentPosition = transform.position;
         float speed = Mathf.Abs((currentPosition - lastPosition).magnitude) / Time.deltaTime;
 
-        // Check for quick movement
         if (speed > movementThreshold)
         {
             ToggleLightSource();
-            timeSinceLastMovement = 0f; // Reset the timer
+            timeSinceLastMovement = 0f;
         }
 
-        // Update the last position for the next frame
         lastPosition = currentPosition;
-
-        // Update the timer
         timeSinceLastMovement += Time.deltaTime;
 
-        // Check for inactivity and deactivate the light source
         if (timeSinceLastMovement > inactivityThreshold && isLightSourceActive)
         {
             ToggleLightSource();
+        }
+
+        Collider[] colliders = Physics.OverlapSphere(transform.position, detectionRange);
+        bool isCandleColliderInRange = false;
+
+        foreach (var collider in colliders)
+        {
+            if (collider.CompareTag("CandleCollider"))
+            {
+                isCandleColliderInRange = true;
+                break;
+            }
+        }
+
+        if (isLightSourceActive && isCandleColliderInRange)
+        {
+            ActivateCandleLight();
         }
     }
 
@@ -46,4 +59,31 @@ public class LighterLight : MonoBehaviour
         isLightSourceActive = !isLightSourceActive;
         lightSource.SetActive(isLightSourceActive);
     }
+
+    void ActivateCandleLight()
+    {
+        if (candleLight != null)
+        {
+            candleLight.SetActive(true);
+            MoveObjectDown();
+        }
+    }
+
+    private bool hasTeleported = false; // New variable to track whether teleportation has occurred
+
+    void MoveObjectDown()
+    {
+        if (candleLightLight != null && candleLightLight.CompareTag("CandleLightLight") && !hasTeleported)
+        {
+            // Teleport the object to a new position along the Z-axis
+            Vector3 newPosition = candleLightLight.transform.position;
+            newPosition.y -= 2.6f;
+            candleLightLight.transform.position = newPosition;
+
+            // Set the flag to indicate that teleportation has occurred
+            hasTeleported = true;
+        }
+    }
+
+
 }
