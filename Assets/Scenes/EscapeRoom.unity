@@ -687,7 +687,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 1911491677}
   finger: {fileID: 14304020}
-  activationDistance: 2
+  activationDistance: 0.1
 --- !u!1001 &74280814
 PrefabInstance:
   m_ObjectHideFlags: 0
