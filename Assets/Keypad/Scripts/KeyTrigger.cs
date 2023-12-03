@@ -10,7 +10,7 @@ public class KeyTrigger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        drawerToInteract = GameObject.FindWithTag("Drawer");
+        
     }
 
     // Update is called once per frame
@@ -24,18 +24,13 @@ public class KeyTrigger : MonoBehaviour
         if (other.CompareTag("Key"))
         {
             // Key entered the trigger zone
-            //drawerToInteract.GetComponent<XRGrabInteractable>().enabled = true;
-            //drawerToInteract.GetComponent<Rigidbody>().isKinematic = false;
-            OpenCabinet();
+            drawerToInteract.GetComponent<XRGrabInteractable>().enabled = true;
+            drawerToInteract.GetComponent<Rigidbody>().isKinematic = false;
 
             Debug.Log("Key inserted!");
-            //Destroy(this.gameObject);
+            Destroy(this.gameObject);
         }
     }
 
-    void OpenCabinet()
-    {
-        drawerToInteract.GetComponent<XRGrabInteractable>().enabled = true;
-        drawerToInteract.GetComponent<Rigidbody>().isKinematic = false;
-    }
+
 }
