@@ -6,6 +6,7 @@ public class LeverTrigger : MonoBehaviour
 {
     GameObject chain;
     Rigidbody chainRigidbody;
+    public AudioSource playSound;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,7 @@ public class LeverTrigger : MonoBehaviour
         {
             chainRigidbody.isKinematic = false;
             chainRigidbody.useGravity = true;
+            playSound.Play();
             Debug.Log("Lever Done");
         }
     }
