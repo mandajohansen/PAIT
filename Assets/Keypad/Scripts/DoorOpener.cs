@@ -23,6 +23,6 @@ public class DoorOpener : MonoBehaviour
 
     public void DoorOpening()
     {
-        door.GetComponent<XRGrabInteractable>().enabled = true;
+        door.isStatic = false;
     }
 }
