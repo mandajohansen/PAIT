@@ -31,7 +31,7 @@ public class PressurePlateChecker : MonoBehaviour
     {
         if (PlateOneScript.correctObjectOnPlate == true && PlateTwoScript.correctObjectOnPlate == true && PlateThreeScript.correctObjectOnPlate == true)
         {
-            Debug.Log("Correct Placement!");
+            //Debug.Log("Correct Placement!");
         }
     }
 }

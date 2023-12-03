@@ -19,17 +19,16 @@ public class dummyScriptforChest : MonoBehaviour
     
     void Update()
     {
-        if (mainChest != null)
+        /*if (mainChest != null)
         {
-            Debug.Log("MainChest is not null.");
+            
             if (top != null)
             {
                 Debug.Log("Top object is not null.");
-            }
+            }*/
         
     }
     
-    }
 
     private void OnTriggerEnter(Collider other)
     {

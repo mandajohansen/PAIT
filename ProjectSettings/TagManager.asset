@@ -24,6 +24,7 @@ TagManager:
   - FingerTipCollider
   - Lever_1
   - Lever_2
+  - chains
   layers:
   - Default
   - TransparentFX
