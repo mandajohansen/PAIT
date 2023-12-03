@@ -6,7 +6,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class KeyTrigger : MonoBehaviour
 {
 
-    public bool isKeyInserted;
     public GameObject drawerToInteract;
     // Start is called before the first frame update
     void Start()
@@ -25,10 +24,18 @@ public class KeyTrigger : MonoBehaviour
         if (other.CompareTag("Key"))
         {
             // Key entered the trigger zone
-            isKeyInserted = true;
-            drawerToInteract.GetComponent<XRGrabInteractable>().enabled = true;
+            //drawerToInteract.GetComponent<XRGrabInteractable>().enabled = true;
+            //drawerToInteract.GetComponent<Rigidbody>().isKinematic = false;
+            OpenCabinet();
+
             Debug.Log("Key inserted!");
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
         }
+    }
+
+    void OpenCabinet()
+    {
+        drawerToInteract.GetComponent<XRGrabInteractable>().enabled = true;
+        drawerToInteract.GetComponent<Rigidbody>().isKinematic = false;
     }
 }
