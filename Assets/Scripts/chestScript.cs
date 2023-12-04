@@ -6,6 +6,8 @@ public class dummyScriptforChest : MonoBehaviour
 {
     GameObject mainChest;
     GameObject top;
+
+    public AudioClip unlockSound;
     
     // Start is called before the first frame update
     void Start()
@@ -35,6 +37,8 @@ public class dummyScriptforChest : MonoBehaviour
         if (other.CompareTag("Key2"))
         {
             top.transform.Rotate(0f, 0f, -55f);
+            AudioSource chestSound = this.gameObject.GetComponent<AudioSource>();
+            chestSound.PlayOneShot(unlockSound);
             Debug.Log("trigger entered");
         }
     }
