@@ -11,6 +11,7 @@ public class LighterLight : MonoBehaviour
     private Vector3 lastPosition;
     private float timeSinceLastMovement = 0f;
     private float inactivityThreshold = 10f;
+    public AudioClip lighterAudio;
 
     void Start()
     {
@@ -58,6 +59,10 @@ public class LighterLight : MonoBehaviour
     {
         isLightSourceActive = !isLightSourceActive;
         lightSource.SetActive(isLightSourceActive);
+
+        AudioSource lighterSound = this.gameObject.GetComponent<AudioSource>();
+
+        lighterSound.PlayOneShot(lighterAudio);
     }
 
     void ActivateCandleLight()
@@ -75,6 +80,7 @@ public class LighterLight : MonoBehaviour
     {
         if (candleLightLight != null && candleLightLight.CompareTag("CandleLightLight") && !hasTeleported)
         {
+
             // Teleport the object to a new position along the Z-axis
             Vector3 newPosition = candleLightLight.transform.position;
             newPosition.y -= 2.8f;

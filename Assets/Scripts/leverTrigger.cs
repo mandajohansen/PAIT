@@ -7,6 +7,7 @@ public class LeverTrigger : MonoBehaviour
     GameObject chain;
     Rigidbody chainRigidbody;
     public AudioSource playSound;
+    public bool hasTriggered;
 
     // Start is called before the first frame update
     void Start()
@@ -31,10 +32,14 @@ public class LeverTrigger : MonoBehaviour
     {
         if (other.CompareTag("Lever_2"))
         {
+            if(!hasTriggered)
+            { 
             chainRigidbody.isKinematic = false;
             chainRigidbody.useGravity = true;
             playSound.Play();
+            hasTriggered = true;
             Debug.Log("Lever Done");
-        }
+            }
+    }
     }
 }

@@ -25,6 +25,7 @@ TagManager:
   - Lever_1
   - Lever_2
   - chains
+  - Monster
   layers:
   - Default
   - TransparentFX

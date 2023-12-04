@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EscapeRoom.unity
     guid: b0d2b28ff8bc0744ba528d05ff3e9a43
+  - enabled: 1
+    path: Assets/Scenes/EscapeRoomFinish.unity
+    guid: cff4cc04a1bdad541ab9f6ca97f257f4
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: bb50d75cc464044a1b1e18cac3ae9c9e, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 8d70a516beb384cb89086d40e4153319, type: 2}

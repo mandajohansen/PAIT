@@ -8,6 +8,7 @@ public class KeyTrigger : MonoBehaviour
 
     public GameObject drawerToInteract;
     public AudioClip unlockSound;
+    public GameObject lockAudioObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,7 @@ public class KeyTrigger : MonoBehaviour
             // Key entered the trigger zone
             drawerToInteract.GetComponent<XRGrabInteractable>().enabled = true;
             drawerToInteract.GetComponent<Rigidbody>().isKinematic = false;
-            AudioSource padlockSound = this.gameObject.GetComponent<AudioSource>();
+            AudioSource padlockSound = lockAudioObject.GetComponent<AudioSource>();
             padlockSound.PlayOneShot(unlockSound);
 
             Debug.Log("Key inserted!");
