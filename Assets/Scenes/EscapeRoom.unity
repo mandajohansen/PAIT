@@ -1803,8 +1803,7 @@ Transform:
   m_LocalPosition: {x: -2.438, y: 5.15, z: -1.102}
   m_LocalScale: {x: 1, y: 0.072803, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1049507493}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &156247100
@@ -9574,13 +9573,13 @@ Transform:
   m_GameObject: {fileID: 1049507492}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0000002305963, y: 0.00000029057261, z: -0.70710695, w: -0.7071067}
-  m_LocalPosition: {x: -0.46799994, y: 8.790845, z: -0.047999978}
-  m_LocalScale: {x: 15.108653, y: 1.0999552, z: 1.0999553}
+  m_LocalPosition: {x: -2.906, y: 5.79, z: -1.15}
+  m_LocalScale: {x: 1.0999554, y: 1.0999554, z: 1.0999553}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 390922866}
   - {fileID: 1878078577}
-  m_Father: {fileID: 152603072}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -360, z: 90}
 --- !u!23 &1049507495
 MeshRenderer:
@@ -12915,7 +12914,7 @@ Transform:
   m_GameObject: {fileID: 1354848016}
   serializedVersion: 2
   m_LocalRotation: {x: -0.000000028414952, y: -0.65832365, z: 0.000000024851028, w: 0.752735}
-  m_LocalPosition: {x: -0.502, y: 4.6126, z: -12.903}
+  m_LocalPosition: {x: -0.502, y: 4.53, z: -12.903}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14870,7 +14869,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 09b395b05d313d549a90c96f6526174b, type: 3}
+  m_Texture: {fileID: 2800000, guid: 9b0a3770c2a5a0d4a81a9991f6eba6b4, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -25008,7 +25007,7 @@ Transform:
   m_GameObject: {fileID: 1284733269147958}
   serializedVersion: 2
   m_LocalRotation: {x: -0.00000003774895, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.501853, y: 4.999, z: -12.870693}
+  m_LocalPosition: {x: -0.501853, y: 4.586, z: -12.870693}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -67629,6 +67628,7 @@ SceneRoots:
   - {fileID: 2303921294493069149}
   - {fileID: 3445352999544363726}
   - {fileID: 152603072}
+  - {fileID: 1049507493}
   - {fileID: 628927172}
   - {fileID: 575380444}
   - {fileID: 4539135275101766}
