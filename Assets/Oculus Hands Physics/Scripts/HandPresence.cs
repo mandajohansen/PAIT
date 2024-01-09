@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
@@ -18,6 +18,8 @@ public class HandPresence : MonoBehaviour
     {
         List<InputDevice> devices = new List<InputDevice>();
 
+        
+        // Gets reference to device which lives up to InputDeviceCharacteristics and stores it as targetDevice
         InputDevices.GetDevicesWithCharacteristics(controllerCharacteristics, devices);
         if (devices.Count > 0)
         {
@@ -27,6 +29,8 @@ public class HandPresence : MonoBehaviour
 
     void UpdateHandAnimation()
     {
+        // Updates the animation of targetDevice based on input as floats.
+
         if(targetDevice.TryGetFeatureValue(CommonUsages.trigger, out float triggerValue))
         {
             handAnimator.SetFloat("Trigger", triggerValue);
