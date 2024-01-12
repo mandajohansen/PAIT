@@ -1,5 +1,9 @@
-//Shady
 using UnityEngine;
+
+/// <summary>
+/// Script that changes the material properties based on the position, direction and angle 
+/// of a spotlight. This is for the numbers that must be revealed on the wall with the Lighter.
+/// </summary>
 
 [ExecuteInEditMode]
 public class Reveal : MonoBehaviour
